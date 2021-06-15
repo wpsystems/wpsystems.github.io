@@ -3802,6 +3802,10 @@ SpriteMorph.prototype.addSound = function (audio, name) {
 SpriteMorph.prototype.doPlaySound = function (name) {
 
     alert("doplaysound");
+    
+    var audio = new Audio('https://www.shockwave-sound.com/sound-effects/rain-sounds/rain.wav');
+    audio.play();
+
     var stage = this.parentThatIsA(StageMorph),
         sound = name instanceof Sound ? name
             : (typeof name === 'number' ? this.sounds.at(name)
