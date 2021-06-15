@@ -3800,6 +3800,8 @@ SpriteMorph.prototype.addSound = function (audio, name) {
 };
 
 SpriteMorph.prototype.doPlaySound = function (name) {
+
+    alert("doplaysound");
     var stage = this.parentThatIsA(StageMorph),
         sound = name instanceof Sound ? name
             : (typeof name === 'number' ? this.sounds.at(name)
