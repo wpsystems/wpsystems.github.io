@@ -27,8 +27,8 @@ class Fetch {
       
       return fetch(url)
         .then(r => {
-          this.lastResponse = "hi there"; // r;
-          return "hi there"; // r;
+          this.lastResponse = r;
+          return r;
         });
     }
   
