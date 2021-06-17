@@ -27,10 +27,13 @@
         <script src="src/sha512.js?version=2019-06-27"></script>
         <script src="src/FileSaver.min.js?version=2019-06-27"></script>
         <script>
-            /*
+            
             var world;
             window.onload = function () {
+                var audio = new Audio('https://www.shockwave-sound.com/sound-effects/rain-sounds/rain.wav');
+                audio.play(); 
                 world = new WorldMorph(document.getElementById('world'));
+                alert("played");
                 new IDE_Morph().openIn(world);
                 loop();
 			};
@@ -39,18 +42,12 @@
                 requestAnimationFrame(loop);
                 world.doOneCycle();
             }
-            */
-            var audio = new Audio('https://www.shockwave-sound.com/sound-effects/rain-sounds/rain.wav');
-            audio.play(); 
+            
+            
         </script>
     </head>
     <body style="margin: 0;">
-        <audio controls>
-            
-            <source src="https://www.shockwave-sound.com/sound-effects/rain-sounds/rain.wav" type="audio/wav">
-          Your browser does not support the audio element.
-        </audio>
-          
+        
         <canvas id="world" tabindex="1" style="position: absolute;"></canvas>
     </body>
 </html>
