@@ -24,6 +24,7 @@ class Fetch {
     }
   
     _fetch (url) {
+      alert("hi there");
       return fetch(url)
         .then(r => {
           this.lastResponse = r;
