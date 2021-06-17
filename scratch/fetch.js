@@ -59,6 +59,7 @@ class ScratchSimpleGamepad {
     }
     
     buttonPressedReleased({b,eventType}) {
+        alert("hi");
         this.update()
         if (b < this.currentButtons.length) {
             if (eventType == 1) { // note: this will be a string, so better to compare it to 1 than to treat it as a Boolean
