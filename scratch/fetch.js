@@ -24,24 +24,21 @@ class Fetch {
     }
   
     _fetch (url) {
-      alert("hi there");
+      
       return fetch(url)
         .then(r => {
-          this.lastResponse = r;
-          return r;
+          this.lastResponse = "hi there"; // r;
+          return "hi there"; // r;
         });
     }
   
     get (args) {
-        alert("hello world");
+        
 
-        return args.URL;
-
-        /*
       return this._fetch(args.URL)
         .then(r => r.text())
         .catch(() => '');
-        */
+        
     }
   }
   
