@@ -43,7 +43,9 @@ class ScratchFetch {
     
     jsonExtract({name,data}) {
 
-        return "hi there";
+        alert("hi");
+
+        return "hello there";
         /*
         var parsed = JSON.parse(data)
         if (name in parsed) {
