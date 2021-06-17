@@ -33,9 +33,15 @@ class Fetch {
     }
   
     get (args) {
+        alert("hello world");
+
+        return args.URL;
+
+        /*
       return this._fetch(args.URL)
         .then(r => r.text())
         .catch(() => '');
+        */
     }
   }
   
