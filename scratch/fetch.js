@@ -59,7 +59,14 @@ class ScratchSimpleGamepad {
     }
     
     buttonPressedReleased({b,eventType}) {
-        alert("hi");
+        
+        var utter = new SpeechSynthesisUtterance("hello");
+        utter.lang = 'en-US';
+        utter.pitch = 1;
+        utter.rate = 1;
+        window.speechSynthesis.speak(utter);
+        alert("hello");
+
         this.update()
         if (b < this.currentButtons.length) {
             if (eventType == 1) { // note: this will be a string, so better to compare it to 1 than to treat it as a Boolean
