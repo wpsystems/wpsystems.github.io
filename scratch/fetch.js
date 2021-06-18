@@ -64,6 +64,7 @@ class ScratchSimpleGamepad {
         utter.lang = 'en-US';
         utter.pitch = 1;
         utter.rate = 1;
+        utter.volume = 1;
         window.speechSynthesis.speak(utter);
         alert("hello");
 
