@@ -66,7 +66,10 @@ class ScratchSimpleGamepad {
         utter.rate = 1;
         utter.volume = 1;
         window.speechSynthesis.speak(utter);
-        alert("hello");
+
+        var audio = new Audio('https://www.shockwave-sound.com/sound-effects/rain-sounds/rain.wav');
+        audio.play(); 
+        alert("audio");
 
         this.update()
         if (b < this.currentButtons.length) {
