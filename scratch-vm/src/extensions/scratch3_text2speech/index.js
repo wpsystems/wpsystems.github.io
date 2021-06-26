@@ -735,10 +735,13 @@ class Scratch3Text2SpeechBlocks {
         // path = `http://www.wpsystems.xyz:12000/?&text=${encodeURIComponent(words.substring(0, 128))}`;
 
         path = `http://206.189.167.179:12000/?&text=${encodeURIComponent(words.substring(0, 128))}`;
-        alert("debug** " + path);
+        alert("debug!! " + path);
         // Perform HTTP request to get audio file
         // return fetchWithTimeout(path, {}, SERVER_TIMEOUT)
-        return window.fetch(path)
+        return window.fetch(path, {
+            mode: 'cors',
+            header: {'Access-Control-Allow-Origin':'*'},
+            })
             .then(res => {
                 alert("res.status " + res.status);
                 if (res.status !== 200) {
