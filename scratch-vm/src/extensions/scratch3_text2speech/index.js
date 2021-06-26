@@ -731,7 +731,7 @@ class Scratch3Text2SpeechBlocks {
         path += `&gender=${gender}`;
         path += `&text=${encodeURIComponent(words.substring(0, 128))}`;
 
-        // alert(path);
+        alert(path);
         // path = `http://www.wpsystems.xyz:12000/?&text=${encodeURIComponent(words.substring(0, 128))}`;
         // return window.fetch(path)
 
