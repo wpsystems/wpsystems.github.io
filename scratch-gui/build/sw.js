@@ -1,6 +1,6 @@
 // These will be replaced at build-time by generate-service-worker-plugin.js
-const ASSETS = ["js/vendors~addon-settings~credits~editor~embed~fullscreen~player.18577f831941306ae888.js","js/addon-settings~editor~fullscreen~player.812b3fb51822d948676d.js","js/editor~embed~fullscreen~player.8f0177d3414676650503.js","js/vendors~editor~embed~fullscreen~player.aa01336c947e13e7dcc6.js","js/addon-settings~addons.817bd47c337c1d019e8b.js","js/addon-settings.3c3a45d66ee19cf324fd.js","js/addons.2b918aaa9c378259ca09.js","js/editor.a58fbe863d1afef54ebb.js","js/fullscreen.39b36a0365605ab26cfa.js","js/player.cdcf9e877f14306e4ee6.js","editor.html","index.html","fullscreen.html","addons.html"];
-const CACHE_NAME = 'tw-73ec247ae2192bd87528aacd63f4d5e223896320';
+const ASSETS = ["js/vendors~addon-settings~credits~editor~embed~fullscreen~player.18577f831941306ae888.js","js/addon-settings~editor~fullscreen~player.812b3fb51822d948676d.js","js/editor~embed~fullscreen~player.8f0177d3414676650503.js","js/vendors~editor~embed~fullscreen~player.11b0578e3a62b4692ef3.js","js/addon-settings~addons.817bd47c337c1d019e8b.js","js/addon-settings.3c3a45d66ee19cf324fd.js","js/addons.2b918aaa9c378259ca09.js","js/editor.a58fbe863d1afef54ebb.js","js/fullscreen.39b36a0365605ab26cfa.js","js/player.cdcf9e877f14306e4ee6.js","editor.html","index.html","fullscreen.html","addons.html"];
+const CACHE_NAME = 'tw-2a7638b1cf178c5ff461ed80cd968f5110ee8eed';
 
 const base = location.pathname.substr(0, location.pathname.indexOf('sw.js'));
 

@@ -731,12 +731,13 @@ class Scratch3Text2SpeechBlocks {
         path += `&gender=${gender}`;
         path += `&text=${encodeURIComponent(words.substring(0, 128))}`;
 
-        alert(path);
+        alert("debug " + path);
         // path = `http://www.wpsystems.xyz:12000/?&text=${encodeURIComponent(words.substring(0, 128))}`;
-        // return window.fetch(path)
+        
 
         // Perform HTTP request to get audio file
-        return fetchWithTimeout(path, {}, SERVER_TIMEOUT)
+        // return fetchWithTimeout(path, {}, SERVER_TIMEOUT)
+        return window.fetch(path)
             .then(res => {
                 if (res.status !== 200) {
                     throw new Error(`HTTP ${res.status} error reaching translation service`);
