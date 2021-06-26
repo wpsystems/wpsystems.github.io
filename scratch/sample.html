@@ -6,5 +6,20 @@
   <body>
     <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
     <iframe src="https://wpsystems.github.io/scratch-gui/build/embed?project_url=wpsystems.github.io/scratch/hello.sb3" width="499" height="416" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>
-  </body>
+    <script>
+        // alert("hi there");
+        path = 'http://206.189.167.179:12000/?&text=hey';
+        window.fetch(path, {
+            mode: 'cors',
+            header: {'Access-Control-Allow-Origin':'*'},
+            })
+            .then(res => {
+                alert("res.status " + res.status);
+            })
+            .catch(error => {
+                alert("ERROR " + error);
+            })
+    </script> 
+        
+</body>
 </html>
