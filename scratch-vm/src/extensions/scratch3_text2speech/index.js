@@ -731,19 +731,24 @@ class Scratch3Text2SpeechBlocks {
         path += `&gender=${gender}`;
         path += `&text=${encodeURIComponent(words.substring(0, 128))}`;
 
-        alert("debug " + path);
-        // path = `http://www.wpsystems.xyz:12000/?&text=${encodeURIComponent(words.substring(0, 128))}`;
         
+        // path = `http://www.wpsystems.xyz:12000/?&text=${encodeURIComponent(words.substring(0, 128))}`;
 
+        path = `http://206.189.167.179:12000/?&text=${encodeURIComponent(words.substring(0, 128))}`;
+        alert("debug** " + path);
         // Perform HTTP request to get audio file
         // return fetchWithTimeout(path, {}, SERVER_TIMEOUT)
         return window.fetch(path)
             .then(res => {
+                alert("res.status " + res.status);
                 if (res.status !== 200) {
                     throw new Error(`HTTP ${res.status} error reaching translation service`);
                 }
 
                 return res.arrayBuffer();
+            })
+            .catch(error => {
+                alert("ERROR " + error);
             })
             .then(buffer => {
                 // Play the sound
