@@ -725,25 +725,17 @@ class Scratch3Text2SpeechBlocks {
         // Build up URL
 
         // let path = `${SERVER_HOST}/synth`;
-        let path = (locale === CANTONESE_ID) ? 'http://www.wpsystems.xyz:12000/' : `${SERVER_HOST}/synth`;
+        let path = (locale === CANTONESE_ID) ? 'http://wpsystems.xyz:12000/tts' : `${SERVER_HOST}/synth`;
 
         path += `?locale=${locale}`;
         path += `&gender=${gender}`;
         path += `&text=${encodeURIComponent(words.substring(0, 128))}`;
 
         
-        // path = `http://www.wpsystems.xyz:12000/?&text=${encodeURIComponent(words.substring(0, 128))}`;
-
-        path = `http://206.189.167.179:12000/?&text=${encodeURIComponent(words.substring(0, 128))}`;
-        alert("debug!! " + path);
         // Perform HTTP request to get audio file
-        // return fetchWithTimeout(path, {}, SERVER_TIMEOUT)
-        return window.fetch(path, {
-            mode: 'cors',
-            header: {'Access-Control-Allow-Origin':'*'},
-            })
+        return fetchWithTimeout(path, {}, SERVER_TIMEOUT)
+        // return window.fetch(path)
             .then(res => {
-                alert("res.status " + res.status);
                 if (res.status !== 200) {
                     throw new Error(`HTTP ${res.status} error reaching translation service`);
                 }
@@ -751,7 +743,7 @@ class Scratch3Text2SpeechBlocks {
                 return res.arrayBuffer();
             })
             .catch(error => {
-                alert("ERROR " + error);
+                throw new Error(`HTTP ${path} ${res.status} error ${error}`);
             })
             .then(buffer => {
                 // Play the sound
