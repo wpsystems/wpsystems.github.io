@@ -725,7 +725,7 @@ class Scratch3Text2SpeechBlocks {
         // Build up URL
 
         // let path = `${SERVER_HOST}/synth`;
-        let path = (locale === CANTONESE_ID) ? 'http://wpsystems.xyz:12000/tts' : `${SERVER_HOST}/synth`;
+        let path = (locale === CANTONESE_ID) ? 'https://wpsystems.xyz:12000/tts' : `${SERVER_HOST}/synth`;
 
         path += `?locale=${locale}`;
         path += `&gender=${gender}`;
