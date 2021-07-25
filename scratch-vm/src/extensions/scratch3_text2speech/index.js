@@ -731,7 +731,7 @@ class Scratch3Text2SpeechBlocks {
         path += `&gender=${gender}`;
         path += `&text=${encodeURIComponent(words.substring(0, 128))}`;
 
-        
+        alert("1");
         // Perform HTTP request to get audio file
         return fetchWithTimeout(path, {}, SERVER_TIMEOUT)
         // return window.fetch(path)
