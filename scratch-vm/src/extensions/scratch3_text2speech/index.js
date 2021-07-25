@@ -737,12 +737,14 @@ class Scratch3Text2SpeechBlocks {
         // return window.fetch(path)
             .then(res => {
                 if (res.status !== 200) {
+                    alert("res.status != 200 status = " + res.status);
                     throw new Error(`HTTP ${res.status} error reaching translation service`);
                 }
 
                 return res.arrayBuffer();
             })
             .catch(error => {
+                alert("error " + error);
                 throw new Error(`HTTP ${path} ${res.status} error ${error}`);
             })
             .then(buffer => {
